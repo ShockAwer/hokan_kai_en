@@ -12,7 +12,7 @@ del.php 20170319 by Yakuba
 ■余談
 このスクリプトは「futaba.php v0.8 lot.041107 Yakuba改 20110108版」以降の
 バージョンと連動してますが、実際にはコレ単体で動いていますので、
-<?php $dat.="<a href=\"./del.php?res=$no\">del</a>&nbsp;"; ?>
+<?php $dat.="<a href=\". /del.php?res=$no\">del</a>&nbsp;"; ? >
 等のようにfutaba.phpに組み込むとこのdel機能と連動出来ます。
 但し組み込む場所は「$no」にレス番号が代入されている場所に限ります。
 それ以外の場所に組み込むと使えません。
@@ -26,21 +26,22 @@ del.php 20170319 by Yakuba
 著作権は放棄していません。
 
 ■更新履歴
-□20110118版    初版
-□20110510版    メール送信時にホスト名も送るようにした
-□20110517版    細かなバグ修正と制作者表記
-□20120602版    PHPの一部バージョンでエラーが発生していた為、修正
-□20170319版    UTF-8化しました。
+□20110118版 初版
+□20110510版 メール送信時にホスト名も送るようにした
+□20110517版 細かなバグ修正と制作者表記
+□20120602版 PHPの一部バージョンでエラーが発生していた為、修正
+□20170319 version UTF-8 is now available.
 ------------------------------------------------------------------------- */
 
-// 全般設定-----------------------------------------------------------------
-define("TITLE", '●●● 保管庫');               // 掲示板の名前
-define("PHP_SELF", 'hokan.php');                // 掲示板のスクリプト名(本体に合わせる事)
-define("PHP_SELF2", 'hokan.htm');               // 入り口ファイル名(本体に合わせる事)
-define("MASTERMAIL", 'hoge@hoge.hoge');         // 送信先(管理者)メールアドレス(必ず変更すること！)
-define("FROMMAIL", 'hoge@hoge.hoge');           // 送信元メールアドレス(必ず変更すること！)
-define("MAILOK", 0);                            // アドレス未変更のまま送信しないための保険。設定が終わったら1にすると送信が出来ます。
+// General settings -----------------------------------------------------------------
+define("TITLE", '●●● Vaults'); // name of the board
+define("PHP_SELF", 'hokan.php'); // name of the script for the BBS (must match the main body)
+define("PHP_SELF2", 'hokan.htm'); // entrance file name (must match the body)
+define("MASTERMAIL", 'hoge@hoge.hoge'); // the email address to send to (administrator) (must be changed!)
+define("FROMMAIL", 'hoge@hoge.hoge'); // source email address (must be changed!)
+define("MAILOK", 0); // Insurance against sending with unchanged address. After setting, set to 1 to send.
 // -------------------------------------------------------------------------
+
 
 if (!isset($dat)){$dat = "";}
 if (!isset($no)){$no = "";}
