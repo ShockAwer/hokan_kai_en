@@ -7,17 +7,17 @@ hokan.php Yakuba改 20190527版
 □画像掲示板
 futaba.php v0.8 lot.031015
 このスクリプトはレッツPHP!<http://php.s3.to/>のgazou.phpを改造したものです。
-配布条件はレッツPHP!に準じます。改造、再配布は自由にどうぞ。
+配布条件はレッツPHP!に準じます。 改造、再配布は自由にどうぞ。
 このスクリプトに関する質問はレッツPHP!にしないようにお願いします。
 最新版は<http://www.2chan.net/script/>で配布しています。
 ご質問は準備板＠ふたば<http://www.2chan.net/junbi/index2.html>までどうぞ。
 
 設置法：
 所望のディレクトリのパーミッションを777にします。
-srcディレクトリとthumbディレクトリを作り、パーミッションを777にします。<br>
+srcディレクトリとthumbディレクトリを作り、パーミッションを777にします。 <br>
 futaba.phpを置き、ブラウザから呼出します(必要なファイルが自動設定されます)。
 gif2png<http://www.tuxedo.org/~esr/gif2png/>がある場合は、
-gifでもサムネイルを作れます。付属のバイナリはlinux-i386用です。
+gifでもサムネイルを作れます。 付属のバイナリはlinux-i386用です。
 
 としあき＠しおから改スクリプト
 Ver.1.0.0 2004/04/21 公開開始
@@ -26,42 +26,42 @@ bmp/swfの明示的な禁止、gif表示方法改造、サムネ画質向上、�
 gif2pngの入手と基本的な設置方法は上記ふたば準備板スレと配布所を参照のこと。
 知恵と助言を授けてくれたとしあき達に多大なる感謝と御礼を。
 Ver.1.0.1 2004/05/09
-設定可能項目に追加
-文中自動リンクの可否/時間表示に秒を含めるか/メル欄にsage挿入で常時sage/設定時間後に強制sage
-以下省略数指定
-Ver.1.0.2 2004/05/19
-管理画面にサムネイル差し替え機能を追加/管理画面に強制スレsage化機能を追加
-Ver.1.0.3 2004/05/22
-複数のサムネイル画像選択機能追加/画像の取得にhtmlを経由機能追加/投稿時にアニGIFのサムネ化選択可能に
-/差し替え動作を一部修正/「レス省略」の設定値を定数化
-Ver.1.0.3a 2004/05/23
-レスに画像添付可能バージョン、開発中ベータ版
-Ver.1.0.4 2004/08/01
-特定のホストを登録してID(ホスト名を暗号化した文字列)、またはホスト名を表示する機能を追加
-Ver.1.0.4a 2004/08/01
-レスに画像添付可能バージョンにID、ホスト名表示機能を追加
-相変わらずベータ版のまま(いや、ベータ版以前に味見試験版の希ガス･･･)
-******************************************！注意！***************************************
-・レス可能にするには331行目の//を削除
-・img.logのファイル名はデフォルトから変えてご使用ください。
-　define(LOGFILE, 'img.log'); // ログファイル名
-・設置サーバによってはindex.htmが無いと画像掲示板設置フォルダ内が見えてしまう場合があります。
-　空のindex.htmを置くか、スクリプトの入り口ファイル名指定をindex.htmに変更してください。
-　define("PHP_SELF2", 'siokara.htm'); // 入り口ファイル名
+Addition to the configurable items
+Whether or not automatic link is available in the text / Whether or not seconds are included in the time display / Always SAGE by inserting SAGE into the MEL column / Forced SAGE after the set time.
+Designation of the number of omissions
+Ver. 1.0.2 2004/05/19
+Add the function of replacing thumbnails on the administration screen / Add the function of forced SAGE on the administration screen
+Ver. 1.0.3 2004/05/22
+Add multiple thumbnail image selection function / Add function via html for image acquisition / Enable thumbnail selection of ani-GIF at the time of posting
+/Modified some of the replacement operation / Modified the setting value of "Les omission" to be a constant value
+Ver. 1.0.3a 2004/05/23
+Version with image attachments for responses, beta version under development
+Ver. 1.0.4 2004/08/01
+Added the ability to register a specific host and display ID (encrypted string of host name) or host name
+Ver. 1.0.4a 2004/08/01
+Added the ability to display ID and host name to the version that allows image attachments to responses
+Still in beta version.
+******************************************! Attention! ***************************************
+Delete // at line 331 to make it respponsible.
+Please change the file name of img.log from the default.
+　define(LOGFILE, 'img.log'); // log file name
+Depending on the installation server, the folder where the image board is installed may be visible without index.htm.
+　Please put an empty index.htm or change the script's entrance file name specification to index.htm.
+　define("PHP_SELF2", 'siokara.htm'); // entrance file name
 *****************************************************************************************
 
-■Yakuba改について
-このスクリプトは上記を改造したhokan.phpをさらに改造したものです。
-ご利用に際しては無保証無サポートですので、それを承知の上でご利用下さい。
-Yakubaの改造箇所(ソース内にYakubaと表記しています)につきましてはレッツPHP様・ふたば様・しおから様へは絶対問い合わせないでください。
+■About Yakuba modification
+This script is a further modification of hokan.php, which is a modification of the above.
+Please use it knowing that there is no guarantee and no support when you use it.
+Please do not contact Let's PHP, Futaba, or Shiokara about the modified part of Yakuba (Yakuba is written in the source).
 
-■更新履歴
-□20120206版    ereg系がPHP5.3.0で非推奨となったためpreg系へ置き換え。
-                HTML 4.01にちょっと準拠。細かいバグフィクス。
-□20120602版    preg系や他の箇所で細かいバグフィクス。
-□20121120版    PHP5.4で関数コール時に参照で引数を渡せなくなった事と、htmlspecialcharsの標準動作が変更になった事に対応(ひろ様感謝！)。
-□20170319版    UTF-8化。
-□20190527版    クッキーの名前欄の不具合修正。
+Update History
+Replaced ereg with preg since ereg is deprecated in PHP5.3.0.
+                Conformed to HTML 4.01 a little. Minor bug fixes.
+□20120602 version: Minor bug fixes in preg system and other parts.
+□20121120 version: Added support for PHP5.4 that function calls can no longer pass arguments by reference and the standard behavior of htmlspecialchars has changed (Thanks, Hiro!). The standard behavior of htmlspecialchars has been changed (Thanks Hiro!).
+□20170319 UTF-8 version.
+Fixed a bug in the cookie name field.
 ------------------------------------------------------------------------- */
 
 // hage 以下2行は調整用･･･
@@ -81,42 +81,42 @@ if(!defined('PHP_VERSION_ID')) {                // ◆Yakuba PHP5.2.7未満にPH
   define('PHP_VERSION_ID', ($v[0] * 10000 + $v[1] * 100 + $v[2]));
 }
 
-// 全般設定---------------------------------------------------------------------
-define("LOGFILE", 'img.log');                   // ログファイル名
-define("TREEFILE", 'tree.log');                 // ログファイル名
-define("IMG_DIR", 'src/');                      // 画像保存ディレクトリ。siokara.phpから見て
-define("THUMB_DIR", 'thumb/');                  // サムネイル保存ディレクトリ
-define("TITLE", '●●● 保管庫');               // タイトル（<title>とTOP）
-define("HOME", '../index.html');                // 「ホーム」へのリンク
-define("MAX_KB", 2048);                         // 投稿容量制限 KB（phpの設定により2Mまで
-define("MAX_W", 256);                           // 投稿サイズ幅（これ以上はwidthを縮小
-define("MAX_H", 256);                           // 投稿サイズ高さ
-define("PAGE_DEF", 10);                         // 一ページに表示する記事
-define("FOLL_ADD", 1010);                       // 以下省略（一ページに表示する記事×指定頁数＝設定数
-define("LOG_MAX", 1010);                        // ログ最大行数
-define("ADMIN_PASS", 'admin');                  // 管理者パス
-define("RE_COL", '789922');                     // ＞が付いた時の色
-define("PHP_SELF", 'hokan.php');                // このスクリプト名
-define("PHP_SELF2", 'hokan.htm');               // 入り口ファイル名
-define("PHP_EXT", '.htm');                      // 1ページ以降の拡張子
-define("RENZOKU", 2);                           // 連続投稿秒数
-define("RENZOKU2", 2);                          // 画像連続投稿秒数
-define("MAX_RES", 30);                          // 強制sageになるレス数
-define("USE_THUMB", 1);                         // サムネイルを作る する:1 しない:0
-define("PROXY_CHECK", 0);                       // proxyの書込みを制限する y:1 n:0
-define("DISP_ID", 0);                           // IDを表示する 強制:2 する:1 しない:0
-define("BR_CHECK", 0);                          // 改行を抑制する行数 しない:0
-define("EN_AUTOLINK", 0);                       // URL自動リンクを行う する:1 しない:0
-define("EN_SEC", 1);                            // 時間表示に「秒」を含める 含める:1 含めない:0
-define("EN_SAGE_START", 0);                     // スレ主強制sage機能を使用する する:1 しない:0
-define("MAX_PASSED_HOUR", 0);                   // 強制sageまでの時間 0で強制sageなし
-define("ADMIN_SAGE", 1);                        // 管理者強制sage処理 する:1 しない:0
-define("NOTICE_SAGE", 0);                       // 強制sageを告知する する:1 しない:0
-define("DEF_SUB", '無念');                      // 省略時の題名
-define("DEF_NAME",'としあき');                  // 省略時の名前
-define("DEF_COM", 'ｷﾀ━━━(ﾟ∀ﾟ)━━━!!');    // 省略時の本文
-define("RES_MARK", '…');                       // レスの頭に付ける文字列
-define("OMIT_RES", 6);                          // 「レス省略」を表示するレスの数
+// general settings ---------------------------------------------------------------------
+define("LOGFILE", 'img.log'); // log file name
+define("TREEFILE", 'tree.log'); // log file name
+define("IMG_DIR", 'src/'); // image storage directory, from siokara.php
+define("THUMB_DIR", 'thumb/'); // Thumbnail storage directory
+define("TITLE", '●●● Storage'); // Title (<title> and TOP)
+define("HOME", '. /index.html'); // link to "HOME
+define("MAX_KB", 2048); // Posting space limit KB (up to 2M by php setting)
+define("MAX_W", 256); // Posting size width (any more than this, reduce width)
+define("MAX_H", 256); // post size height
+define("PAGE_DEF", 10); // posts to display on one page
+define("FOLL_ADD", 1010); // Omitted below (Articles to be displayed on one page x number of pages specified = number of settings)
+define("LOG_MAX", 1010); // maximum number of log lines
+define("ADMIN_PASS", 'admin'); // admin path
+define("RE_COL", '789922'); // color when > is added
+define("PHP_SELF", 'hokan.php'); // name of this script
+define("PHP_SELF2", 'hokan.htm'); // Entrance file name
+define("PHP_EXT", '.htm'); // extension after page 1
+define("RENZOKU", 2); // number of seconds for consecutive posts
+define("RENZOKU2", 2); // number of seconds to post consecutive images
+define("MAX_RES", 30); // Number of forced sage
+define("USE_THUMB", 1); // create thumbnails: 1, don't: 0
+define("PROXY_CHECK", 0); // restrict proxy writes y:1 n:0
+define("DISP_ID", 0); // display ID force:2 do:1 not:0
+define("BR_CHECK", 0); // Number of lines to suppress line breaks Not:0
+define("EN_AUTOLINK", 0); // perform URL auto-linking Do:1 Don't:0
+define("EN_SEC", 1); // Include "seconds" in time display Include:1 Not include:0
+define("EN_SAGE_START", 0); // Use the threader forced sage function.
+define("MAX_PASSED_HOUR", 0); // time until forced sage 0 for no forced sage
+define("ADMIN_SAGE", 1); // use administrator forced SAGE processing
+define("NOTICE_SAGE", 0); // notify forced SAGE do:1 don't:0
+define("DEF_SUB", 'regret'); // title when omitted
+define("DEF_NAME",'Toshaiki'); // name to omit
+define("DEF_COM", 'Holy shit!'; // body text when omitted
+define("RES_MARK", '...'); // string to prefix the response
+define("OMIT_RES", 6); // Number of responses to display Les omit.
 
 // レス画像添付機能-------------------------------------------------------------
 define("RES_IMG", 0);                           // レスにも画像を添付できるようにする 添付可能:1 添付不可:0
@@ -164,10 +164,10 @@ $addinfo='
 ';
 
 // ▼Yakuba追加
-define("NINSYOU", 2);                           // 簡易認証キー(使用しない：0、スレ立＆レスに使用：1、スレ立のみに使用：2)
-define("NINSYOU_MAS", '味方');                  // 簡易認証キー(キーワード)
-define("NINSYOU_Q", '先輩の○○だよ(漢字2字)'); // 簡易認証キー(質問。レイアウトの都合上、文字は少な目に。)
-define("DELON", 1);                             // DEL機能(使用しない：0、使用する：1。同一DIRにdel.phpが必要)
+define("NINSYOU", 2);                           // Simple authentication key (not used: 0, used for slipping & responding: 1, used only for slipping: 2)
+define("NINSYOU_MAS", 'Ally');                  // Simple authentication key (keyword)
+define("NINSYOU_Q", 'The password is Ally'); // Simple authentication key (Question. Less text for layout reasons)
+define("DELON", 1);                             // DEL function (Not used: 0, Used: 1. del.php is required in the same DIR)
 // ▲Yakuba追加
 
 /* ヘッダ */
@@ -178,9 +178,6 @@ function head(&$dat){
   <meta name="Berry" content="no">
   <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
   <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-  <title>'.TITLE.'</title>
-  <!-- <link rel="shortcut icon" href="http://アドレス/favicon.ico" type="image/vnd.microsoft.icon"> -->
-  <!-- <link rel="icon" href="http://アドレス/favicon.ico" type="image/vnd.microsoft.icon"> -->
   <style type="text/css">
     <!--
     body,tr,td,th { font-size:12pt }
@@ -206,14 +203,14 @@ function form(&$dat,$resno,$admin=""){
   $maxbyte = MAX_KB * 1024;
   $no=$resno;
   if($resno){
-    $msg .= "[<a href=\"".PHP_SELF2."\">板に戻る</a>]\n";
+    $msg .= "[<a href=\"".PHP_SELF2."\">Back to the Board</a>]\n";
     $msg .= "<table width=\"100%\"><tr><th bgcolor=\"#e04000\">\n";
-    $msg .= "<font color=\"#ffffff\">レス送信モード</font>\n";
+    $msg .= "<font color=\"#ffffff\">Reponse Mode</font>\n";
     $msg .= "</th></tr></table>\n";
   }
   if($admin){
     $hidden = "<input type=\"hidden\" name=\"admin\" value=\"".ADMIN_PASS."\">";
-    $msg = "<h4>タグがつかえます</h4>";
+    $msg = "<h4>You can use HTML tags.</h4>";
   }
   $dat .= $msg.'<center>'.
           '<form action="'.PHP_SELF.'" method="POST" enctype="multipart/form-data">'.
@@ -221,36 +218,36 @@ function form(&$dat,$resno,$admin=""){
           '<input type="hidden" name="MAX_FILE_SIZE" value="'.$maxbyte.'">';
   if($no){ $dat .= '<input type="hidden" name="resto" value="'.$no.'">'; }
   $dat .= '<table cellpadding="1" cellspacing="1">'.
-          '<tr><td bgcolor="#eeaa88"><b>コメント<br>検索タグ</b></td>'.
+          '<tr><td bgcolor="#eeaa88"><b>Comment<br>Search tags</b></td>'.
           '<td><textarea name="com" cols="48" rows="3" wrap="soft"></textarea></td></tr>';
   if(!$resno || RES_IMG){
     // hage 変更 2004.8.1
     // 投稿時にGIF停止できるようにラベルを追加(USE_GIF_THUMBによる判別追加)
-    $dat .= '<tr><td bgcolor="#eeaa88"><b>添付File</b></td>'.
-            '<td><input type="file" name="upfile" size="35"> <input type="submit" value="送信する">';
+    $dat .= '<tr><td bgcolor="#eeaa88"><b>File</b></td>'.
+            '<td><input type="file" name="upfile" size="35"> <input type="submit" value="Post">';
     if(!USE_GIF_THUMB){
-      $dat .= '[<label><input type="checkbox" name="noanime" value="on" checked="checked">GIFアニメ停止</label>]';
+      $dat .= '[<label><input type="checkbox" name="noanime" value="on" checked="checked">GIF animation stop</label>]';
     }
 //    $dat .= '[<label><input type="checkbox" name="textonly" value="on">画像なし</label>]</td></tr>';
     // hage 変更ここまで
   }
-  $dat .= '<tr><td bgcolor="#eeaa88"><b>削除キー</b></td>'.
+  $dat .= '<tr><td bgcolor="#eeaa88"><b>Delete</b></td>'.
           '<td><input type="password" name="pwd" size="8" maxlength="8" value="">'.
-          '<small>(記事の削除用。英数字で8文字以内) 　[<a href="hokan.php?mode=admin">管理用</a>]</small></td></tr>';
+          '<small>(Used to delete Posts. ) 　[<a href="hokan.php?mode=admin">Admin</a>]</small></td></tr>';
 
   // ▼Yakuba追加
   if (NINSYOU==1){
-    $dat .= '<tr><td bgcolor="#eeaa88"><b>認証キー</b></td>'.
+    $dat .= '<tr><td bgcolor="#eeaa88"><b>Verification</b></td>'.
             '<td><input type="text" name="ninsyou_key" size="8">'.
             '<small>';
-    $dat .= ' <font color="#ff0099">必須</font> ';
+    $dat .= ' <font color="#ff0099">Required</font> ';
     $dat .= '('.NINSYOU_Q.')</small></td></tr>';
   }
   if (NINSYOU==2 && !$resno){
-    $dat .= '<tr><td bgcolor="#eeaa88"><b>認証キー</b></td>'.
+    $dat .= '<tr><td bgcolor="#eeaa88"><b>Verification</b></td>'.
             '<td><input type="text" name="ninsyou_key" size="8">'.
             '<small>';
-    $dat .= ' <font color="#ff0099">必須</font> ';
+    $dat .= ' <font color="#ff0099">Required</font> ';
     $dat .= '('.NINSYOU_Q.')</small></td></tr>';
   }
   // ▲Yakuba追加
@@ -260,17 +257,17 @@ function form(&$dat,$resno,$admin=""){
 
   // hage 変更 2004.8.1
   if(RES_IMG){
-    $dat .= 'レスに画像添付可。';
+    $dat .= 'Images can be attached to the response.';
   }
-  $dat .= '添付可能ファイル：GIF,JPG,PNG。'.MAX_KB.'KBまで。'.MAX_W.'x'.MAX_H.'以上は縮小されます。</li>'.
+  $dat .= 'You can upload：GIF,JPG,PNG. You can upload up to '.MAX_KB.'KB。Images larger than '.MAX_W.'x'.MAX_H.' will get thumbnailed.</li>'.
           '';
   if(!USE_GIF_THUMB){
-    $dat .= '<li>GIFは動きます。動かしたい時は投稿時に[GIFアニメ停止]のチェックを解除。</li>';
+    $dat .= '<li>GIFs will move. If you dont want to move GIFs, uncheck the [Stop GIF animation] checkbox when submitting.</li>';
   }
   // hage 変更ここまで
   $dat .= ''.
           $addinfo.'</small></td></tr></table>
-<!-- ◆ここら辺に広告等を組み込めます -->
+<!-- ◆Advertisements, etc. can be incorporated into these areas. -->
 </form></center><hr>';
 }
 
@@ -301,7 +298,7 @@ function updatelog($resno=0){
       list($artno,)=explode(",",rtrim($tree[$i]));
       if($artno==$resno){$st=$i;$find=true;break;} //レス先検索
     }
-    if(!$find) error("該当記事がみつかりません");
+    if(!$find) error("I can't find the relevant post.");
   }
   $line = file(LOGFILE);
   $countline=count($line);
@@ -353,7 +350,7 @@ function updatelog($resno=0){
       if($w && $h){                     // サイズがある時
         if(@is_file(THUMB_DIR.$time.'s.jpg') &&
           (USE_GIF_THUMB||$ext!='.gif'||stristr($url,'noanime')||@is_file(THUMB_DIR.$time.'s.jpg'.REPLACE_EXT))){
-          $imgsrc = "<small>サムネイルを表示しています.クリックすると元のサイズを表示します.</small><br>";
+          $imgsrc = "<small>Thumbnail displayed. Click to view original.</small><br>";
           if (IMG_REFER) {$imgsrc .= "<a href=\"".IMG_REF_DIR.$time.".htm\" target=_blank>";}
           else{$imgsrc .= "<a href=\"".$src."\" target=_blank>";}
           if ( @is_file(THUMB_DIR.$time.'s.jpg'.REPLACE_EXT)){
@@ -375,8 +372,8 @@ function updatelog($resno=0){
       }
       if (IMG_REFER) {
         // スレもテーブル型にするために画像関係タグを別変数に
-        $dat_img="画像タイトル：<a href=\"".IMG_REF_DIR.$time.".htm\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";      }else{
-        $dat_img="画像タイトル：<a href=\"$src\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";
+        $dat_img="Filename：<a href=\"".IMG_REF_DIR.$time.".htm\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";      }else{
+        $dat_img="Filename：<a href=\"$src\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";
       }
     }
 
@@ -405,19 +402,19 @@ function updatelog($resno=0){
 
     // そろそろ消える。
     if($lineindex[$no]-1 >= LOG_MAX*0.95){
-     $dat.="<font color=\"#f00000\"><b>このスレは古いので、もうすぐ消えます。</b></font><br>\n";
+     $dat.="<font color=\"#f00000\"><b>Due to this threads age, it will be pruned soon.</b></font><br>\n";
     }
     // 管理者サムネ差し替え告知
     if(NOTICE_THUMB && @is_file(THUMB_DIR.$time.'s.jpg'.REPLACE_EXT)){
       $dat.="<font color=\"#f00000\"><small><b>".
-            "管理者によりサムネイルが差し替えられています。理由はお察しください。<br>".
-            "サムネイルをクリックすると元の画像を表示します。".
+            "The thumbnail has been replaced by the administrator. Ill let you guess why.<br>".
+            "Click on the thumbnail to view the original image.".
             "</b></small></font><br>\n";
     }
     // 管理者sage告知
     if(NOTICE_SAGE && stristr($url,'sage')){
       $dat.="<font color=\"#f00000\"><small><b>".
-            "管理者によりsage指定されています。理由はお察しください。".
+            "This thread has been autosaged by the adminstrator. Ill let you guess why.".
             "</b></small></font><br>\n";
     }
     //レス作成
@@ -425,8 +422,8 @@ function updatelog($resno=0){
      $s=count($treeline) - (OMIT_RES-1);
      if($s<1){$s=1;}
      elseif($s>1){
-      $dat.="<font color=\"#707070\">レス".
-             ($s - 1)."件省略。全て読むには返信ボタンを押してください。</font><br>\n";
+      $dat.="<font color=\"#707070\">Response".
+             ($s - 1)."Thread trimmed. To read all responses, please click the reply button.</font><br>\n";
      }
     }else{$s=1;}
     for($k = $s; $k < count($treeline); $k++){
@@ -461,7 +458,7 @@ function updatelog($resno=0){
           if(@is_file(THUMB_DIR.$time.'s.jpg') &&
             (USE_GIF_THUMB||$ext!='.gif'||stristr($url,'noanime')||@is_file(THUMB_DIR.$time.'s.jpg'.REPLACE_EXT))){
             // ツール避けhtml参照を追加
-            $imgsrc = "<small>サムネイルを表示しています.クリックすると元のサイズを表示します.</small><br>";
+            $imgsrc = "<small>Thumbnail displayed. Click to view original photo.</small><br>";
             if (IMG_REFER) {$imgsrc .= "<a href=\"".IMG_REF_DIR.$time.".htm\" target=_blank>";}
             else{$imgsrc .= "<a href=\"".$src."\" target=_blank>";}
             if ( @is_file(THUMB_DIR.$time.'s.jpg'.REPLACE_EXT)){
@@ -482,11 +479,11 @@ function updatelog($resno=0){
           $imgsrc .= "<img src=".$src." border=\"0\" align=\"left\" hspace=\"20\" alt=\"".$size." B\"></a>";
         }
         if (IMG_REFER) {
-          $dat_img = "<br>画像タイトル：<a href=\"".IMG_REF_DIR.$time.
+          $dat_img = "<br>Filename：<a href=\"".IMG_REF_DIR.$time.
                      ".htm\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";
         }
         else{
-          $dat_img="<br>画像タイトル：<a href=\"$src\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";
+          $dat_img="<br>Filename:：<a href=\"$src\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";
         }
       }
 
@@ -517,10 +514,10 @@ function updatelog($resno=0){
   }
 
   $dat .= '<table align="right"><tr><td nowrap align="center">'.
-          '<input type="hidden" name="mode" value="usrdel">【記事削除】'.
-          '[<input type="checkbox" name="onlyimgdel" value="on">画像だけ消す]<br>'.
-          '削除キー<input type="password" name="pwd" size="8" maxlength="8" value="">'.
-          '<input type="submit" value="削除"></form></td></tr></table>';
+          '<input type="hidden" name="mode" value="usrdel"> (Post deleted) '.
+          '[<input type="checkbox" name="onlyimgdel" value="on">File only)<br>'.
+          'Delkey<input type="password" name="pwd" size="8" maxlength="8" value="">'.
+          '<input type="submit" value="Submit"></form></td></tr></table>';
 
     if(!$resno){ //res時は表示しない
       $prev = $st - PAGE_DEF;
@@ -533,13 +530,13 @@ function updatelog($resno=0){
         }else{
           $dat.="<form action=\"".$prev/PAGE_DEF.PHP_EXT."\" method=\"get\"><td>";
         }
-        $dat.="<input type=\"submit\" value=\"前のページ\">";
+        $dat.="<input type=\"submit\" value=\"Previous\">";
         $dat.="</td></form>";
-      }else{$dat.="<td>最初のページ</td>";}
+      }else{$dat.="<td>Recent</td>";}
 
       $dat.="<td>";
       for($i = 0; $i < count($tree) ; $i+=PAGE_DEF){
-        if($i>=FOLL_ADD){$dat.="[以下省略]";break;}
+        if($i>=FOLL_ADD){$dat.="[Omitted below]";break;}
         if($st==$i){$dat.="[<b>".($i/PAGE_DEF)."</b>] ";}
         else{
           if($i==0){$dat.="[<a href=\"".PHP_SELF2."\">0</a>] ";}
@@ -552,7 +549,7 @@ function updatelog($resno=0){
         $dat.="<form action=\"".$next/PAGE_DEF.PHP_EXT."\" method=get><td>";
         $dat.="<input type=\"submit\" value=\"次のページ\">";
         $dat.="</td></form>";
-      }else{$dat.="<td>最後のページ</td>";}
+      }else{$dat.="<td>Last</td>";}
         $dat.="</tr></table><br clear=\"all\">\n";
     }
     foot($dat);
@@ -581,8 +578,8 @@ function updatelog($resno=0){
 function foot(&$dat){
   $dat.='
 <center>
-<small><!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- しおから改1.0.4 -->
-- <a href="http://php.s3.to" target="_top">GazouBBS</a> + <a href="http://www.2chan.net/" target=_top>futaba</a> + <a href="http://siokara.que.jp/" target="_top">siokara</a> + <a href="http://t-jun.kemoren.com/" target="_top">yakuba</a> -
+<small><!-- GazouBBS v3.0 --><! -- Futaba-kai 0.8 --><! -- Dhyo-kara-kai 1.0.4 --><! -- Hokan-kai-en 0.0 -->
+- <a href="http://php.loglog.jp" target="_top">GazouBBS</a> + <a href="http://www.2chan.net/" target=_top>futaba</a> + <a href="https://github.com/hackpaint/siokara104" target="_top">siokara</a> + <a href="http://t-jun.kemoren.com/" target="_top">yakuba</a> -
 </small>
 </center>
 </body></html>';
@@ -603,7 +600,7 @@ function error($mes,$dest=''){
   head($dat);
   echo $dat;
   echo "<br><br><hr size=\"1\"><br><br>
-        <center><font color=\"red\" size=\"5\"><b>$mes<br><br><a href=".PHP_SELF2.">リロード</a></b></font></center>
+        <center><font color=\"red\" size=\"5\"><b>$mes<br><br><a href=".PHP_SELF2.">Refresh</a></b></font></center>
         <br><br><hr size=\"1\">";
   die("</body></html>");
 }
@@ -626,13 +623,13 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
   if(NINSYOU==1){
     $ninsyou_key2 = ($_POST['ninsyou_key']);
     if (!(NINSYOU_MAS==$ninsyou_key2)) {
-      error("認証キーが違います<br>再度確認してください"); 
+      error("That's not the verification key.<br>Please double check."); 
     }
   }
   if(NINSYOU==2 && !$resto){
     $ninsyou_key2 = ($_POST['ninsyou_key']);
     if (!(NINSYOU_MAS==$ninsyou_key2)) {
-      error("認証キーが違います<br>再度確認してください"); 
+      error("That's not the verification key.<br>Please double check."); 
     }
   }
   // ▲Yakuba追加
@@ -644,12 +641,12 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
     //↑でエラーなら↓に変更
     //copy($upfile, $dest);
     $upfile_name = CleanStr($upfile_name);
-    if(!is_file($dest)) error("アップロードに失敗しました<br>サーバがサポートしていない可能性があります",$dest);
+    if(!is_file($dest)) error("Upload failed.<br>The server may not support this file -- sorry!",$dest);
     $size = getimagesize($dest);
-    if(!is_array($size)) error("アップロードに失敗しました<br>画像ファイル以外は受け付けません",$dest);
+    if(!is_array($size)) error("Upload failed.<br>Invalid file type",$dest);
     $chk = md5_of_file($dest);
     foreach($badfile as $value){if(preg_match("#^$value#",$chk)){
-      error("アップロードに失敗しました<br>同じ画像がありました",$dest); //拒絶画像
+      error("Upload failed.<br>Duplicate image",$dest); //拒絶画像
     }}
     chmod($dest,0666);
     $W = $size[0];
@@ -659,7 +656,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
       case 1 : $ext=".gif";break;
       case 2 : $ext=".jpg";break;
       case 3 : $ext=".png";break;
-     default : $ext=".xxx";error("アップロードに失敗しました<br>GIF,JPG,PNG以外の画像ファイルは受け付けません",$dest);break;
+     default : $ext=".xxx";error("Upload failed<br>Image files other than GIF,JPG,PNG will not be accpeted",$dest);break;
     }
 
     // 画像表示縮小
@@ -670,36 +667,36 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
       $W = ceil($W * $key);
       $H = ceil($H * $key);
     }
-    $mes = "画像 $upfile_name のアップロードが成功しました<br><br>";
+    $mes = "$upfile_name was uploaded successfully!<br><br>";
   }
 
   foreach($badstring as $value){if(preg_match("#$value#",$com)||preg_match("#$value#",$sub)||preg_match("#$value#",$name)||preg_match("#$value#",$email)){
-  error("拒絶されました(str)",$dest);};}
-  if($_SERVER["REQUEST_METHOD"] != "POST") error("不正な投稿をしないで下さい(post)",$dest);
+  error("Rejected due to the string (str)",$dest);};}
+  if($_SERVER["REQUEST_METHOD"] != "POST") error("Do not submit fraudulent submissions! (post)",$dest);
   // フォーム内容をチェック
   if(!$name||preg_match("#^[ |　|]*$#",$name)) $name="";
   if(!$com||preg_match("#^[ |　|\t]*$#",$com)) $com="";
   if(!$sub||preg_match("#^[ |　|]*$#",$sub))   $sub=""; 
 
-  if(!$resto&&!$textonly&&!is_file($dest)) error("画像がありません",$dest);
-  if(!$com&&!is_file($dest)) error("何か書いて下さい",$dest);
+  if(!$resto&&!$textonly&&!is_file($dest)) error("You didn't upload an image and didn't check No File.",$dest);
+  if(!$com&&!is_file($dest)) error("No text",$dest);
 
-  $name=preg_replace("#管理#","\"管理\"",$name);
-  $name=preg_replace("#削除#","\"削除\"",$name);
+  $name=preg_replace("#Ctrl#","\"Ctrl\"",$name);
+  $name=preg_replace("#Ctrl#","\"Ctrl\"",$name);
 
-  if(strlen($com) > 1000) error("本文が長すぎます",$dest);
-  if(strlen($name) > 100) error("名前が長すぎます",$dest);
-  if(strlen($email) > 100) error("メール欄が長すぎます",$dest);
-  if(strlen($sub) > 100) error("題名が長すぎます",$dest);
-  if(strlen($resto) > 10) error("レス番号の指定が長すぎます",$dest);
-  if(strlen($url) > 100) error("URL欄が長すぎます",$dest);
+  if(strlen($com) > 1000) error("Your comment is too long",$dest);
+  if(strlen($name) > 100) error("Your name is too long",$dest);
+  if(strlen($email) > 100) error("Your email is too long",$dest);
+  if(strlen($sub) > 100) error("Your title is too long",$dest);
+  if(strlen($resto) > 10) error("The response number specification is too long.",$dest);
+  if(strlen($url) > 100) error("Your URL is too long",$dest);
 
   //ホスト取得
   $host = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
 
   foreach($badip as $value){ //拒絶host
    if(preg_match("#$value$#i",$host)){
-    error("拒絶されました(host)",$dest);
+    error("Horrible ip. Blocked. (host)",$dest);
   }}
   if(preg_match("#^mail#i",$host)
     || preg_match("#^ns#i",$host)
@@ -722,9 +719,9 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
 
   if($pxck=="on" && PROXY_CHECK){
     if(proxy_connect('80') == 1){
-      error("ＥＲＲＯＲ！　公開ＰＲＯＸＹ規制中！！(80)",$dest);
+      error("ＥＲＲＯＲ！　ＰＲＯＸＹ DETECTED！！(80)",$dest);
     } elseif(proxy_connect('8080') == 1){
-      error("ＥＲＲＯＲ！　公開ＰＲＯＸＹ規制中！！(8080)",$dest);
+      error("ＥＲＲＯＲ！　ＰＲＯＸＹ DETECTED！！(8080)",$dest);
     }
   }
 
@@ -740,7 +737,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
 
   $c_pass = $pwd;
   $pass = ($pwd) ? substr(md5($pwd),2,8) : "*";
-  $youbi = array('日','月','火','水','木','金','土');
+  $youbi = array('Sun','Mon','Tue','Wen','Thurs','Fri','Satur');
   $yd = $youbi[gmdate("w", $time+9*60*60)] ;
   if(EN_SEC){
       $now = gmdate("y/m/d",$time+9*60*60)."(".(string)$yd.")".gmdate("H:i:s",$time+9*60*60);
@@ -753,7 +750,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
     if($email&&DISP_ID==1){
       $now .= " ID:???";
     }else{
-      $now.=" ID:".substr(crypt(md5($_SERVER["REMOTE_ADDR"].'idの種'.gmdate("Ymd", $time+9*60*60)),'id'),-8);
+      $now.=" ID:".substr(crypt(md5($_SERVER["REMOTE_ADDR"].'idseed'.gmdate("Ymd", $time+9*60*60)),'id'),-8);
     }
   }
   //テキスト整形
@@ -826,11 +823,11 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
    if(strlen($ltime)>10){$ltime=substr($ltime,0,-3);}
    if($host==$lhost||substr(md5($pwd),2,8)==$lpwd||substr(md5($pwdc),2,8)==$lpwd){$pchk=1;}else{$pchk=0;}
    if(RENZOKU && $pchk && $time - $ltime < RENZOKU)
-    error("連続投稿はもうしばらく時間を置いてからお願い致します",$dest);
+    error("Please allow a few more minutes for continuous posting.",$dest);
    if(RENZOKU && $pchk && $time - $ltime < RENZOKU2 && $upfile_name)
-    error("画像連続投稿はもうしばらく時間を置いてからお願い致します",$dest);
+    error("Please wait a while longer before posting consecutive images.",$dest);
    if(RENZOKU && $pchk && $com == $lcom && !$upfile_name)
-    error("連続投稿はもうしばらく時間を置いてからお願い致します",$dest);
+    error("Please allow a few more minutes for continuous posting.",$dest);
   }
 
   // ログ行数オーバー
@@ -851,7 +848,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
     for($i=0;$i<200;$i++){ //画像重複チェック
      list(,,,,,,,,,$extp,,,$timep,$chkp,) = explode(",", $line[$i]);
      if($chkp==$chk&&file_exists($path.$timep.$extp)){
-      error("アップロードに失敗しました<br>同じ画像があります",$dest);
+      error("Upload failed<br>We have the same image.",$dest);
     }}
   }
   list($lastno,) = explode(",", $line[0]);
@@ -895,7 +892,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
         }
         break;
   } } }
-  if(!$find){if(!$resto){$newline="$no\n";}else{error("スレッドがありません",$dest);}}
+  if(!$find){if(!$resto){$newline="$no\n";}else{error("No thread",$dest);}}
   $newline.=implode('', $line);
   ftruncate($tp,0);
   set_file_buffer($tp, 0);
@@ -930,7 +927,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
   updatelog();
 
   echo "<html><head><META HTTP-EQUIV=\"refresh\" content=\"1;URL=".PHP_SELF2."\"></head>";
-  echo "<body>$mes 画面を切り替えます</body></html>";
+  echo "<body>$mes You will be redirected to your post in a few seconds</body></html>";
 }
 
 //サムネイル作成
@@ -1121,27 +1118,27 @@ function valid($pass){
 
   head($dat);
   echo $dat;
-  echo "[<a href=\"".PHP_SELF2."\">掲示板に戻る</a>]\n";
-  echo "[<a href=\"".PHP_SELF."\">ログを更新する</a>]\n";
+  echo "[<a href=\"".PHP_SELF2."\">Back to Bulletin Board</a>]\n";
+  echo "[<a href=\"".PHP_SELF."\">Update Log</a>]\n";
   echo "<table width=\"100%\"><tr><th bgcolor=\"#e08000\">\n";
-  echo "<font color=\"#ffffff\">管理モード</font>\n";
+  echo "<font color=\"#ffffff\">Adminstration</font>\n";
   echo "</th></tr></table>\n";
   echo "<p><form action=\"".PHP_SELF."\" method=\"POST\">\n";
   // ログインフォーム
   if(!$pass){
     echo "<center><table border=\"0\"><tr><td>";
-    echo "<input type=\"radio\" name=\"admin\" value=\"del\" checked>記事削除<BR>";
-    echo "<input type=\"radio\" name=\"admin\" value=\"post\">管理人投稿<BR>";
-    if (is_file($default_thumb)) echo "<input type=\"radio\" name=\"admin\" value=\"thumb\">サムネイル差し替え<BR>";
-    if (ADMIN_SAGE) echo "<input type=\"radio\" name=\"admin\" value=\"sage\">強制sage処理<br>";
+    echo "<input type=\"radio\" name=\"admin\" value=\"del\" checked>Adminstration<BR>";
+    echo "<input type=\"radio\" name=\"admin\" value=\"post\">Admin Post<BR>";
+    if (is_file($default_thumb)) echo "<input type=\"radio\" name=\"admin\" value=\"thumb\">Thumbnail replacement<BR>";
+    if (ADMIN_SAGE) echo "<input type=\"radio\" name=\"admin\" value=\"sage\">Forced SAGE processing<br>";
     // hage 追加 2004.8.1
-    echo "<input type=\"radio\" name=\"admin\" value=\"reghost\">ホスト/ID表示リストに登録<br>";
-    echo "<input type=\"radio\" name=\"admin\" value=\"delhost\">ホスト/ID表示リストから削除<br>";
+    echo "<input type=\"radio\" name=\"admin\" value=\"reghost\">Register to host/ID display list<br>";
+    echo "<input type=\"radio\" name=\"admin\" value=\"delhost\">Remove from host/ID display list<br>";
     // hage 追加ここまで
     echo "<input type=\"hidden\" name=\"mode\" value=\"admin\">\n";
     echo "</td></tr></table>";
     echo "<input type=\"password\" name=\"pass\" size=\"8\">";
-    echo "<input type=\"submit\" value=\" 認証 \"></form></center>\n";
+    echo "<input type=\"submit\" value=\" Certification \"></form></center>\n";
     die("</body></html>");
   }
 }
@@ -1208,13 +1205,13 @@ function admindel($pass){
   echo "<input type=\"hidden\" name=\"mode\" value=\"admin\">\n";
   echo "<input type=\"hidden\" name=\"admin\" value=\"del\">\n";
   echo "<input type=\"hidden\" name=\"pass\" value=\"$pass\">\n";
-  echo "<center><p>削除したい記事のチェックボックスにチェックを入れ、削除ボタンを押して下さい。</p>\n";
-  echo "<p><input type=\"submit\" value=\"削除する\">";
-  echo "<input type=\"reset\" value=\"リセット\">";
-  echo "[<input type=\"checkbox\" name=\"onlyimgdel\" value=\"on\" checked>画像だけ消す]</p>";
+  echo "<center><p>Check the checkboxes of the articles you wish to delete and press the Delete button.</p>\n";
+  echo "<p><input type=\"submit\" value=\"Delete\">";
+  echo "<input type=\"reset\" value=\"Reset\">";
+  echo "[<input type=\"checkbox\" name=\"onlyimgdel\" value=\"on\" checked>Delete only the image]</p>";
   echo "<p><table border=\"1\" cellspacing=\"0\">\n";
-  echo "<tr bgcolor=\"#6080f6\"><th>削除</th><th>記事No</th><th>投稿日</th><th>題名</th>";
-  echo "<th>投稿者</th><th>コメント<br>検索タグ</th><th>ホスト名</th><th>添付<br>(Bytes)</th><th>md5</th>";
+  echo "<tr bgcolor=\"#6080f6\"><th>Delete</th><th>Np/</th><th>Submission Date</th><th>Title</th>";
+  echo "<th>Contributer</th><th>Comment<br>Search</th><th>host name</th><th>File<br>(Bytes)</th><th>md5</th>";
   echo "</tr>\n";
   $line = file(LOGFILE);
 
@@ -1252,8 +1249,8 @@ function admindel($pass){
     echo "</tr>\n";
   }
 
-  echo "</table><p><input type=\"submit\" value=\"削除する$msg\">";
-  echo "<input type=\"reset\" value=\"リセット\"></form>";
+  echo "</table><p><input type=\"submit\" value=\"Delete $msg\">";
+  echo "<input type=\"reset\" value=\"Reset\"></form>";
 
   $all = (int)($all / 1024);
   echo "【 画像データ合計 : <b>$all</b> KB 】";
@@ -1337,11 +1334,11 @@ function admin_chgthumb($pass){
   echo "<input type=\"hidden\" name=\"mode\" value=\"admin\">\n";
   echo "<input type=\"hidden\" name=\"admin\" value=\"thumb\">\n";
   echo "<input type=\"hidden\" name=\"pass\" value=\"$pass\">\n";
-  echo "<center><p>サムネイルを差し替えたい記事のチェックボックスにチェックを入れ、差し替えボタンを押して下さい。\n";
-  echo "<center>「差替」と「差替解除」が切り替わります。</p>\n";
-  echo "<p><input type=\"submit\" value=\"差し替え\">";
-  echo "<input type=\"reset\" value=\"リセット\">";
-  if(!USE_GIF_THUMB){echo "[<input type=\"checkbox\" name=\"stillGIF\" value=\"on\">GIFをサムネイル化するだけ]";}
+  echo "<center><p>Check the checkbox of the article whose thumbnail you want to replace, and press the replace button.\n";
+  echo "<center>The Switch and Cancel switch.</p>\n";
+  echo "<p><input type=\"submit\" value=\"Replace\">";
+  echo "<input type=\"reset\" value=\"Reset\">";
+  if(!USE_GIF_THUMB){echo "[<input type=\"checkbox\" name=\"stillGIF\" value=\"on\">Just make GIFs into thumbnails.]";}
 
   echo "</p><center><BR>";
   $i=0;
@@ -1352,8 +1349,8 @@ function admin_chgthumb($pass){
   }
 
   echo "<p><table border=\"1\" cellspacing=\"0\"></p>\n";
-  echo "<tr bgcolor=\"#6080f6\"><th>選択</th><th>記事No</th><th>状態</th><th>投稿日</th><th>題名</th>";
-  echo "<th>投稿者</th><th>コメント<br>検索タグ</th><th>ホスト名</th><th>添付<br>(Bytes)</th>";
+  echo "<tr bgcolor=\"#6080f6\"><th>Selection</th><th>Article No</th><th>Status</th><th>Posted date</th><th>Title</th>";
+  echo "<th>Author</th><th>Comment<br>Search Tag</th><th>Hostname</th><th>Attachment<br>(Bytes)</th>";
   echo "</tr>\n";
 
   // ログファイル読み出し
@@ -1391,11 +1388,11 @@ function admin_chgthumb($pass){
       echo "</tr>\n";
     }
   }
-  echo "</table><p><input type=submit value=\"差し替え$msg\">";
-  echo "<input type=reset value=\"リセット\"></form>";
+  echo "</table><p><input type=submit value=\"Replace $msg\">";
+  echo "<input type=reset value=\"Reset\"></form>";
 
   $all = (int)($all / 1024);
-  echo "【 画像データ合計 : <b>$all</b> KB 】";
+  echo "【 Total file size : <b>$all</b> KB 】";
   die("</center></body></html>");
 }
 
@@ -1452,14 +1449,14 @@ function admin_sage($pass){
   echo "<input type=\"hidden\" name=\"mode\" value=\"admin\">\n";
   echo "<input type=\"hidden\" name=\"admin\" value=\"sage\">\n";
   echo "<input type=\"hidden\" name=\"pass\" value=\"$pass\">\n";
-  echo "<center><P>sage状態を変更したい記事のチェックボックスにチェックを入れ、変更ボタンを押して下さい。\n";
-  echo "<center>「sage」と「sage解除」が切り替わります。\n";
-  echo "<center>「sageスタート」や「レス数sage」による「sage」は解除できません。\n";
-  echo "<p><input type=\"submit\" value=\"変更\">";
-  echo "<input type=\"reset\" value=\"リセット\">";
+echo "<center><P>Check the checkbox of the article whose sage status you want to change, and press the change button.\n";
+  echo "<center>sage and unsage are toggled. \n";
+  echo "<center>Cannot cancel sage by sage start or resist number sage. \n";
+  echo "<p><input type=\"submit\" value=\"change\">";
+  echo "<input type=\"reset\" value=\"reset\">";
   echo "<P><table border=\"1\" cellspacing=\"0\">\n";
-  echo "<tr bgcolor=\"#6080f6\"><th>選択</th><th>記事No</th><th>状態</th><th>投稿日</th><th>題名</th>";
-  echo "<th>投稿者</th><th>コメント<br>検索タグ<br>検索タグ</th><th>ホスト名</th><th>添付<br>(Bytes)</th>";
+  echo "<tr bgcolor=\"#6080f6\"><th>Selection</th><th>Article No</th><th>Status</th><th>Posted date</th><th> Title</th>";
+  echo "<th>Poster</th><th>Comment<br>Search tag<br>Search tag</th><th>Host name</th><th>Attachment<br>(Bytes)</ th>";
   echo "</tr>\n";
 
   //ツリーファイルからスレ元の記事No.を取得
@@ -1510,12 +1507,12 @@ function admin_sage($pass){
       echo "<td>$host</td><td align=center>$clip($size)</td>\n";
       echo "</tr>\n";
     }
-  }
-  echo "</table><p><input type=submit value=\"変更$msg\">";
-  echo "<input type=reset value=\"リセット\"></form>";
+}
+  echo "</table><p><input type=submit value=\"change $msg\">";
+  echo "<input type=reset value=\"reset\"></form>";
 
   $all = (int)($all / 1024);
-  echo "【 画像データ合計 : <b>$all</b> KB 】";
+  echo "[ Total image data : <b>$all</b> KB ]";
   die("</center></body></html>");
 }
 
@@ -1590,18 +1587,18 @@ function regist_host($pass){
   }
 
   // 処理記事選択画面を表示
-  echo "<input type=\"hidden\" name=\"mode\" value=\"admin\">\n";
+echo "<input type=\"hidden\" name=\"mode\" value=\"admin\">\n";
   echo "<input type=\"hidden\" name=\"admin\" value=\"reghost\">\n";
   echo "<input type=\"hidden\" name=\"pass\" value=\"$pass\">\n";
-  echo "<center><P>対象ホストの記事チェックボックスにチェックを入れ、変更ボタンを押して下さい。<br>\n";
-  echo "表示ホストのリストに登録されます。<br>\n";
-  echo "[ホスト名を表示させる]にチェックするとホスト名を、しないとIDを表示します。<br>\n";
-  echo "<p><input type=\"submit\" value=\"変更\">";
-  echo "<input type=\"reset\" value=\"リセット\">";
-  echo "<p>[<input type=\"checkbox\" name=\"ipdisp\" value=\"on\">ホスト名を表示させる]";
+  echo "<center><P>Check the checkbox for the target host article and press the change button.<br>\n";
+  echo "You will be added to the list of display hosts.<br>\n";
+  echo "If you check [Display the host name], the host name will be displayed, otherwise the ID will be displayed.<br>\n";
+  echo "<p><input type=\"submit\" value=\"change\">";
+  echo "<input type=\"reset\" value=\"reset\">";
+  echo "<p>[<input type=\"checkbox\" name=\"ipdisp\" value=\"on\">Show host name]";
   echo "<p><table border=\"1\" cellspacing=\"0\">\n";
-  echo "<tr bgcolor=\"#6080f6\"><th>選択</th><th>記事No</th><th>状態</th><th>投稿日</th><th>題名</th>";
-  echo "<th>投稿者</th><th>コメント<br>検索タグ</th><th>ホスト名</th>";
+  echo "<tr bgcolor=\"#6080f6\"><th>Selection</th><th>Article No</th><th>Status</th><th>Posted date</th><th> Title</th>";
+  echo "<th>Author</th><th>Comment<br>Search Tags</th><th>Hostname</th>";
   echo "</tr>\n";
 
   //ログファイル読み出し
@@ -1622,7 +1619,7 @@ function regist_host($pass){
     if(strlen($com) > 20) $com = substr($com,0,18) . ".";
     $url = '　　　';
     if(in_array($host,$idhostdat)){ $url = 'ID'; }
-    if(in_array($host,$hostdat)){ $url = 'ホスト'; }
+    if(in_array($host,$hostdat)){ $url = 'Host'; }
 
     $bg = ($bgcol++ % 2) ? "d6d6f6" : "f6f6f6";//背景色
 
@@ -1631,8 +1628,8 @@ function regist_host($pass){
     echo "<td><b>$name</b></td><td><small>$com</small></td><td>$host</td>\n";
     echo "</tr>\n";
   }
-  echo "</table><p><input type=submit value=\"変更\">";
-  echo "<input type=reset value=\"リセット\"></form>";
+  echo "</table><p><input type=submit value=\"Submit\">";
+  echo "<input type=reset value=\"Reset\"></form>";
   die("</center></body></html>");
 }
 
@@ -1712,27 +1709,27 @@ function delete_host($pass){
   if($setflag || $idsetflag){ updatelog(); }
 
   // 処理記事選択画面を表示
-  echo "<input type=hidden name=mode value=admin>\n";
+ echo "<input type=hidden name=mode value=admin>\n";
   echo "<input type=hidden name=admin value=delhost>\n";
   echo "<input type=hidden name=pass value=\"$pass\">\n";
-  echo "<center><P>リストから削除したいホストのチェックボックスにチェックを入れ、変更ボタンを押して下さい。<br>\n";
-  echo "表示ホストのリストから削除されます。\n";
-  echo "<p><input type=submit value=\"削除\">";
-  echo "<input type=reset value=\"リセット\">";
-  echo "<P>ホスト表示リスト<br><table border=1 cellspacing=0>\n";
-  echo "<tr bgcolor=6080f6><th>選択</th><th>ホスト名</th></tr>\n";
+  echo "<center><P>Check the checkbox of the host you want to remove from the list and press the change button.<br>\n";
+  echo "It will be removed from the list of visible hosts.\n";
+  echo "<p><input type=submit value=\"Delete\">";
+  echo "<input type=reset value=\"reset\">";
+  echo "<P>Host display list<br><table border=1 cellspacing=0>\n";
+  echo "<tr bgcolor=6080f6><th>Select</th><th>Hostname</th></tr>\n";
 
-  foreach($hostdat as $line){
+  foreach($hostdata as $line){
     if($line != 'dummy'){
-      $bg = ($bgcol++ % 2) ? "d6d6f6" : "f6f6f6";//背景色
+      $bg = ($bgcol++ % 2) ? "d6d6f6" : "f6f6f6";//background color
       echo "<tr bgcolor=\"$bg\"><th><input type=\"checkbox\" name=\"$line\" value=\"delete\"></th>";
       echo "<td>$line</td></tr>\n";
     }
   }
   echo "</table>";
-  echo "<P>ID表示リスト<br><table border=1 cellspacing=0>\n";
-  echo "<tr bgcolor=\"#6080f6\"><th>選択</th><th>ホスト名</th></tr>\n";
-
+  echo "<P>ID display list<br><table border=1 cellspacing=0>\n";
+  echo "<tr bgcolor=\"#6080f6\"><th>Select</th><th>Host name</th></tr>\n";
+	
   foreach($idhostdat as $line){
     if($line != 'dummy'){
       $bg = ($bgcol++ % 2) ? "d6d6f6" : "f6f6f6";//背景色
@@ -1753,37 +1750,38 @@ function init(){
   // $chkfile=array(LOGFILE,TREEFILE);
   $chkfile=array(LOGFILE,TREEFILE,HOSTFILE,IDHOSTFILE);
   // hage 追加ここまで
-  if(!is_writable(realpath("./")))error("カレントディレクトリに書けません<br>");
+ 
+if(!is_writable(realpath("./")))error("Current directory is not writable<br>");
   foreach($chkfile as $value){
     if(!file_exists(realpath($value))){
       $fp = fopen($value, "w");
       set_file_buffer($fp, 0);
-      if($value==LOGFILE)fputs($fp,"1,2002/01/01(月) 00:00,名無し,,無題,本文なし,,,,,,,,,\n");
+      if($value==LOGFILE)fputs($fp,"1,2002/01/01 (Monday) 00:00,No Name,,Untitled,No Text,,,,,,,,,\n");
       if($value==TREEFILE)fputs($fp,"1\n");
-      // hage 追加 2004.8.1
+      // added hage 2004.8.1
       if($value==HOSTFILE || $value==IDHOSTFILE)fputs($fp,"dummy");
-      // hage 追加ここまで
+      // add hage up to here
       fclose($fp);
       if(file_exists(realpath($value)))@chmod($value,0666);
     }
-    if(!is_writable(realpath($value)))$err.=$value."を書けません<br>";
-    if(!is_readable(realpath($value)))$err.=$value."を読めません<br>";
+    if(!is_writable(realpath($value)))$err.=$value."cannot be written<br>";
+    if(!is_readable(realpath($value)))$err.=$value."cannot be read<br>";
   }
   @mkdir(IMG_DIR,0777);@chmod(IMG_DIR,0777);
-  if(!is_dir(realpath(IMG_DIR)))$err.=IMG_DIR."がありません<br>";
-  if(!is_writable(realpath(IMG_DIR)))$err.=IMG_DIR."を書けません<br>";
-  if(!is_readable(realpath(IMG_DIR)))$err.=IMG_DIR."を読めません<br>";
+  if(!is_dir(realpath(IMG_DIR)))$err.=IMG_DIR."Missing<br>";
+  if(!is_writable(realpath(IMG_DIR)))$err.=IMG_DIR."cannot be written<br>";
+  if(!is_readable(realpath(IMG_DIR)))$err.=IMG_DIR."cannot be read<br>";
   if(USE_THUMB){
     @mkdir(THUMB_DIR,0777);@chmod(THUMB_DIR,0777);
-    if(!is_dir(realpath(IMG_DIR)))$err.=THUMB_DIR."がありません<br>";
-    if(!is_writable(realpath(THUMB_DIR)))$err.=THUMB_DIR."を書けません<br>";
-    if(!is_readable(realpath(THUMB_DIR)))$err.=THUMB_DIR."を読めません<br>";
+    if(!is_dir(realpath(IMG_DIR)))$err.=THUMB_DIR."Missing<br>";
+    if(!is_writable(realpath(THUMB_DIR)))$err.=THUMB_DIR."cannot be written<br>";
+    if(!is_readable(realpath(THUMB_DIR)))$err.=THUMB_DIR."cannot be read<br>";
   }
   @mkdir(IMG_REF_DIR,0777);@chmod(IMG_REF_DIR,0777);
-  if(!is_dir(realpath(IMG_REF_DIR)))$err.=IMG_REF_DIR."がありません<br>";
-  if(!is_writable(realpath(IMG_REF_DIR)))$err.=IMG_REF_DIR."を書けません<br>";
-  if(!is_readable(realpath(IMG_REF_DIR)))$err.=IMG_REF_DIR."を読めません<br>";
-  if($err)error($err);
+  if(!is_dir(realpath(IMG_REF_DIR)))$err.=IMG_REF_DIR."Missing<br>";
+  if(!is_writable(realpath(IMG_REF_DIR)))$err.=IMG_REF_DIR."cannot be written<br>";
+  if(!is_readable(realpath(IMG_REF_DIR)))$err.=IMG_REF_DIR."cannot be read<br>";
+  if($err) error($err);
 }
 /*-----------Main-------------*/
 $buf='';
