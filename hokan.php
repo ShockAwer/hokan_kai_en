@@ -95,7 +95,7 @@ define("PAGE_DEF", 10); // posts to display on one page
 define("FOLL_ADD", 1010); // Omitted below (Articles to be displayed on one page x number of pages specified = number of settings)
 define("LOG_MAX", 1010); // maximum number of log lines
 define("ADMIN_PASS", 'admin'); // admin path
-define("RE_COL", '789922'); // color when > is added
+define("RE_COL", '789922'); // color when > is added (Greentext)
 define("PHP_SELF", 'hokan.php'); // name of this script
 define("PHP_SELF2", 'hokan.htm'); // Entrance file name
 define("PHP_EXT", '.htm'); // extension after page 1
@@ -136,14 +136,14 @@ define("NOTICE_THUMB", 1);                      // サムネ差し替えを告�
 
 // 項目を増やす場合は定数宣言したファイル名、タイトルを$rep_thumb配列に追加します。
 // もちろん定数宣言しないで直接配列に追加してもOK
-define("R_THUM1", 'replace_n.jpg');             // 差し替えサムネ(1) ファイル名
-define("R_TITL1", 'ふつう');                    // 差し替えサムネ(1) タイトル
-define("R_THUM2", 'replace_g.jpg');             // 差し替えサムネ(2) ファイル名
-define("R_TITL2", 'ぐろ');                      // 差し替えサムネ(2) タイトル
-define("R_THUM3", 'replace_l.jpg');             // 差し替えサムネ(3) ファイル名
-define("R_TITL3", 'ろり');                      // 差し替えサムネ(3) タイトル
-define("R_THUM4", 'replace_3.jpg');             // 差し替えサムネ(4) ファイル名
-define("R_TITL4", 'さんじ');                    // 差し替えサムネ(4) タイトル
+define("R_THUM1", 'replace_n.jpg'); // replacement thumbnail (1) filename
+define("R_TITL1", 'Guro'); // replacement thumbnail (1) title
+define("R_THUM2", 'replace_g.jpg'); // replacement thumbnail (2) filename
+define("R_TITL2", 'Guro'); // Replacement thumbnail (2) title
+define("R_THUM3", 'replace_l.jpg'); // replacement thumbnail (3) filename
+define("R_TITL3", 'Lori'); // Replacement thumbnail (3) title
+define("R_THUM4", 'replace_3.jpg'); // replacement thumbnail (4) filename
+define("R_TITL4", 'Sanji'); // Replacement thumbnail (4) title
 
 $rep_thumb = array(R_TITL1=>R_THUM1,R_TITL2=>R_THUM2,R_TITL3=>R_THUM3,R_TITL4=>R_THUM4);
 $default_thumb = R_THUM1;                       // デフォルトのサムネファイル名
@@ -167,7 +167,7 @@ $addinfo='
 define("NINSYOU", 2);                           // Simple authentication key (not used: 0, used for slipping & responding: 1, used only for slipping: 2)
 define("NINSYOU_MAS", 'Ally');                  // Simple authentication key (keyword)
 define("NINSYOU_Q", 'The password is Ally'); // Simple authentication key (Question. Less text for layout reasons)
-define("DELON", 1);                             // DEL function (Not used: 0, Used: 1. del.php is required in the same DIR)
+define("DELON", 0);                             // DEL function (Not used: 0, Used: 1. del.php is required in the same DIR)
 // ▲Yakuba追加
 
 /* ヘッダ */
